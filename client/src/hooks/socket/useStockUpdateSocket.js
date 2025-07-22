@@ -3,7 +3,11 @@ import io from "socket.io-client";
 
 const useStockUpdateSocket = (setProductDashboardData) => {
   useEffect(() => {
-    const socket = io(import.meta.env.VITE_HARVESTHUB_API, {
+    // For same-origin deployment, use window.location.origin
+    // For separate deployment, use the env variable
+    const socketUrl = import.meta.env.VITE_HARVESTHUB_API || window.location.origin;
+    
+    const socket = io(socketUrl, {
       transports: ["websocket"],
     });
 

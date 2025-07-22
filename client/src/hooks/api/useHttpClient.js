@@ -4,7 +4,9 @@ import { notify } from "../../utils/helper/notification";
 import { notifyType } from "../../utils/helper/notificationType";
 import { useCookies } from "react-cookie";
 
-axios.defaults.baseURL = import.meta.env.VITE_HARVESTHUB_API;
+// For same-origin deployment, empty string works fine for axios
+// For separate deployment, use the full URL
+axios.defaults.baseURL = import.meta.env.VITE_HARVESTHUB_API || "";
 
 const useHttpClient = () => {
   const [isLoading, setIsLoading] = useState(false);
