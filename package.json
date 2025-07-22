@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "HarvestHub - Agricultural marketplace platform",
   "scripts": {
-    "build": "cd client && npm install && npm run build && cd ..",
+    "build": "cd client && npm install --include=dev && npm run build && cd ..",
     "start": "cd server && npm install && node index.js",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd server && node index.js"
