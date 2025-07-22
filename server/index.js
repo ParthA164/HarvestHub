@@ -16,7 +16,7 @@ const graph = require("./routes/graph.js");
 const ai = require("./routes/ai.js");
 const auth = require("./routes/auth");
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 10000;
 const app = express();
 
 app.use(cors({
