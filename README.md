@@ -13,8 +13,7 @@ HarvestHub is a comprehensive digital platform connecting farmers and agricultur
 
 ## 🚀 Live Demo
 
-**Frontend**: [HarvestHub Platform](https://your-deployed-url.com)  
-**API**: [API Documentation](https://your-api-url.com)
+ [HarvestHub Platform](https://harvesthub-16x8.onrender.com/)  
 
 ---
 
@@ -628,75 +627,6 @@ Sample test data for development:
   }
 }
 ```
-
----
-
-## 🤝 Contributing
-
-### **Development Setup**
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/new-feature`
-3. Make changes and test thoroughly
-4. Commit: `git commit -m 'Add new feature'`
-5. Push: `git push origin feature/new-feature`
-6. Create Pull Request
-
-### **Code Style**
-- Follow existing code patterns
-- Use meaningful variable names
-- Add comments for complex logic
-- Ensure responsive design for frontend
-
-### **Pull Request Guidelines**
-- Include description of changes
-- Reference any related issues
-- Ensure all tests pass
-- Update documentation if needed
-
----
-
-## 📄 License
-
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Team
-
-**Developer**: [ParthA164](https://github.com/ParthA164)
-
----
-
-## 📞 Support
-
-For support and queries:
-- **GitHub Issues**: [Create an issue](https://github.com/ParthA164/HarvestHub/issues)
-- **Email**: [Contact via GitHub](https://github.com/ParthA164)
-
----
-
-## 🙏 Acknowledgments
-
-- **Google Generative AI** for crop prediction capabilities
-- **Cloudinary** for reliable image hosting
-- **MongoDB** for robust database solutions
-- **React & Node.js** communities for excellent documentation
-- **Open Source Contributors** for various packages used
-
----
-
-## 📈 Future Enhancements
-
-- [ ] Mobile app development (React Native)
-- [ ] Advanced search and filtering
-- [ ] Payment gateway integration
-- [ ] Multi-language support
-- [ ] Seller verification system
-- [ ] Advanced analytics dashboard
-- [ ] Push notifications
-- [ ] Social features (farmer networking)
-- [ ] Weather API integration
-- [ ] Machine learning for price prediction
 
 ---
 
