@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Ensure base URL is correct for production
   server: { 
     https: false // Disabled for production - Render handles SSL
   },

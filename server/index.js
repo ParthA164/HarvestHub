@@ -31,12 +31,7 @@ const io = new Server(server);
 
 setupWebSocket(io);
 
-// Health Check
-app.get("/", (req, res) => {
-  res.send("HarvestHub Server is running");
-});
-
-// Routes
+// API Routes (must come before static file serving)
 app.use("/auth", auth);
 app.use("/products", product);
 app.use("/reviews", review);
@@ -45,11 +40,31 @@ app.use("/faqs", faq);
 app.use("/graph", graph);
 app.use("/ai", ai);
 
-// Serve static files from React build
-app.use(express.static(path.join(__dirname, '../client/dist')));
+// Health Check - moved to a specific API route to avoid conflicts
+app.get("/api/server-health", (req, res) => {
+  const fs = require('fs');
+  const frontendExists = fs.existsSync(path.join(__dirname, '../client/dist/index.html'));
+  
+  res.json({
+    status: "HarvestHub Server is running",
+    port: PORT,
+    frontendBuilt: frontendExists,
+    timestamp: new Date().toISOString()
+  });
+});
 
-// Handle React routing, return all requests to React app
+// Serve static files from React build (with proper options)
+app.use(express.static(path.join(__dirname, '../client/dist'), {
+  index: false, // Don't serve index.html automatically for directories
+  redirect: false // Don't redirect trailing slashes
+}));
+
+// Handle React routing - return all non-API requests to React app
 app.get('*', (req, res) => {
+  // Don't serve React app for API routes
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).json({ error: 'API endpoint not found' });
+  }
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
