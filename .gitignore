@@ -1,0 +1,25 @@
+# Ignore env files
+client/.env
+server/.env
+
+# Ignore node_modules
+client/node_modules/
+server/node_modules/
+
+# Ignore package-lock.json
+client/package-lock.json
+server/package-lock.json
+
+# Ignore build outputs
+client/dist/
+server/build/
+
+# Ignore temporary files
+server/test.js
+server/tempCodeRunnerFile.js
+server/testGemini.js
+left HarvestHub.txt
+
+# Ignore Vercel-specific files (not needed for Render)
+client/vercel.json
+server/vercel.json
